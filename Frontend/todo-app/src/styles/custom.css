@@ -1,0 +1,211 @@
+/* Custom styles for Todo App */
+.todo-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02);
+}
+
+.todo-title {
+  font-size: 4rem;
+  font-weight: 300;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.todo-form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.todo-form:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.todo-input {
+  border: none;
+  border-bottom: 2px solid #e2e8f0;
+  border-radius: 0;
+  padding: 0.75rem 0.5rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 2px 0 0 #4299e1;
+}
+
+.todo-button {
+  background: #3182ce; /* Solid blue color for better visibility */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.todo-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  background: #2c5282; /* Darker blue on hover */
+}
+
+.todo-button:active {
+  transform: translateY(1px);
+}
+
+.todo-button:disabled {
+  background: #4299e1; /* Lighter blue when disabled */
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.todo-filter-button {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.todo-filter-button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.todo-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.todo-table thead {
+  background: linear-gradient(135deg, #f6f9fc 0%, #eef2f7 100%);
+}
+
+.todo-table th {
+  font-weight: 600;
+  color: #4a5568;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.todo-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.todo-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.todo-table tbody tr:hover {
+  background-color: #f7fafc;
+}
+
+.todo-checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid #cbd5e0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.todo-checkbox.checked {
+  background-color: #48bb78;
+  border-color: #48bb78;
+}
+
+.todo-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.todo-pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.todo-pagination button:hover:not(:disabled) {
+  background: #f7fafc;
+}
+
+.todo-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.todo-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  color: #a0aec0;
+  font-size: 1.1rem;
+}
+
+/* Task item styles */
+.task-item {
+  transition: all 0.3s ease;
+}
+
+.task-overdue {
+  color: #e53e3e;
+  font-weight: 500;
+}
+
+.task-completed {
+  color: #718096;
+  text-decoration: line-through;
+}
+
+.task-actions button {
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.task-actions button:hover {
+  background-color: #f7fafc;
+}
+
+.task-edit-button {
+  color: #4299e1;
+}
+
+.task-delete-button {
+  color: #f56565;
+}
